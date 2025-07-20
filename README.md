@@ -3,6 +3,7 @@ Mobile-First IDE for vibe-coding, web development and prototyping
 
 **Key features**
 - Code editor with multi-file support (html, css, js, json, md)
+- Convenient status bar: character/line counter, quick project file switching
 - Clipboard operations (copy/paste)
 - Change history with undo functionality
 - Project export/import as ZIP archives

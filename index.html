@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Pencil v2.0 by PØWR¹</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+         
+
+
+  <!-- =======================
+       SECTION - MAIN
+       ======================= -->
+  <div class="section sec-main">
+      
+      <input type="checkbox" id="toggle-column" hidden>
+      
+    <div class="flexcol col-input">
+     
+     
+     
+       <input type="checkbox" id="toggle-menu-file" hidden>
+  <input type="checkbox" id="toggle-menu-edit" hidden>
+  
+  
+
+      <!-- =======================
+           BAR TOOLS - SEC
+           ======================= -->
+      <div class="flexsec sec-bar-tools" style="flex:0 0 5vh; padding:14px;">
+        <div class="flexbox bar-main" style="width: 80%; max-width: 400px;">
+            
+            
+          <label for="toggle-menu-file" class="flex-button btnfile" title="File operations">
+            <i class="fas fa-file"></i>
+            <span class="meta">file</span>
+          </label>
+          
+          <label for="toggle-menu-edit" class="flex-button btnedit" title="Edit operations">
+            <i class="fas fa-edit"></i>
+            <span class="meta">edit</span>
+          </label>
+          
+          <div class="flex-button btnundo" id="btn-undo" title="Undo">
+            <i class="fas fa-undo"></i>
+            <span class="meta">undo</span>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <!-- =======================
+           CODE EDITOR SEC
+           ======================= -->
+      <div class="flexsec sec-coder" style="flex:1;">
+        <textarea id="code-editor" spellcheck="false" placeholder="Enter your code here..."></textarea>
+      </div>
+
+
+  <!-- =======================
+       FILE MENU SEC
+       ======================= -->
+ 
+  
+  
+  <div class="flexsec sec-menu-file" style="flex:1; ">
+    <div class="flex-button" id="btn-reset" style="color:var(--powr1-red)";>
+      <i class="fas fa-undo"></i>
+      <span class="meta">reset</span>
+    </div>
+    <div class="flex-button" id="btn-new" style="color:var(--powr1-green);">
+      <i class="fas fa-file-alt"></i>
+      <span class="meta">new file</span>
+    </div>
+      <div class="flex-button"><span class="meta">----------------</span></div>
+  </div>
+  
+  
+  <div class="flexsec sec-menu-file" id="project-files" style="flex:1;">
+  </div>
+  
+  
+  
+  <div class="flexsec sec-menu-file" id="export-functions" style="flex:1;">
+      <div class="flex-button"><span class="meta">----------------</span></div>
+    <div class="flex-button" id="btn-export">
+      <i class="fas fa-file-archive"></i>
+      <span class="meta">export to zip</span>
+    </div>
+    <div class="flex-button" id="btn-import">
+      <i class="fas fa-file-upload"></i>
+      <span class="meta">import zip</span>
+    </div>
+    <div class="flex-button" id="btn-share">
+      <i class="fas fa-share-alt"></i>
+      <span class="meta">share code</span>
+    </div>
+  </div>
+
+
+
+  <!-- =======================
+       EDIT MENU SEC
+       ======================= -->
+     
+<div class="flexsec sec-menu-edit" id="edit-functions" style="flex:1;">
+  
+ 
+    <div class="flex-button btnclear" id="btn-clear-menu" style="color:var(--powr1-red);">
+      <i class="fas fa-broom"></i>
+      <span class="meta">clear</span>
+    </div>
+    
+    <div class="flex-button btncopy" id="btn-copy-menu" style="color:var(--powr1-blue);">
+      <i class="fas fa-copy"></i>
+      <span class="meta">copy</span>
+    </div>
+    
+    <div class="flex-button btnpaste" id="btn-paste-menu" style="color:var(--powr1-green);">
+      <i class="fas fa-paste"></i>
+      <span class="meta">paste</span>
+    </div>
+    
+  </div>
+
+
+
+
+<!-- =======================
+       NOTIFICATIONS CONTAINER
+       ======================= -->
+  <div class="flexbox" id="notifications" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index:5;"></div>
+
+
+
+      <!-- =======================
+            BAR STATUS SEC
+           ======================= -->
+      <div class="flexsec sec-bar-status" style="flex:0 0 3vh; flex-direction: row; ">
+    
+          <div class="flex-button" id="current-file" title="Current file">
+            <span class="meta" style="color:var(--powr1-blue);">index.html</span>
+          </div>
+          <div class="flex-button" id="char-count" title="Character count">
+            <span class="meta">0 chars</span>
+          </div>
+          <div class="flex-button" id="line-count" title="Line count">
+            <span class="meta">0 lines</span>
+          </div>
+          <a href="https://powr-one.com" class="flex-button" id="author" title="Visit PØWR¹">
+            <span class="meta">PØWR¹</span>
+          </a>
+        </div>
+      </div>
+    
+
+
+
+  
+  
+    <!-- =======================
+         SECTION - OUTPUT
+         ======================= -->
+    <div class="flexcol col-output" style="flex:1; background: white;">
+      <iframe id="output-frame" style="width:100%; height:100%; border:none;"></iframe>
+      
+      
+      <label for="toggle-column" class="flex-button btnrun" id="btn-run" style="position:absolute;top:15px;right:15px;background:var(--powr1-white); color:var(--powr1-dark); width:50px;">
+        <i class="fas fa-play"></i>
+      </label>
+    </div>
+  
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

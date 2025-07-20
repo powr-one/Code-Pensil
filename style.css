@@ -27,7 +27,7 @@ html {
 body {
   overflow: hidden;
   font-family: 'Roboto Mono', monospace;
-  height: 100vh;
+  
   -webkit-overflow-scrolling: touch;
 }
 
@@ -37,7 +37,7 @@ body {
 .section {
   display: flex;
   flex-direction: column;
-  height: 95vh;
+  height: 90vh;
 }
 
 .flexcol {

@@ -60,11 +60,19 @@ function createDefaultFiles() {
       type: 'html'
     },
     'style.css': {
-      content: `body {
+      content: `* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+body {
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1200px;
   line-height: 1.6;
 }`,
       type: 'css'

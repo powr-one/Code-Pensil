@@ -1,6 +1,9 @@
 # Code-Pensil
 Mobile-First IDE for vibe-coding, web development and prototyping
 
+Use it for free:
+https://code-pensil.vercel.app/
+
 **Key features**
 - Code editor with multi-file support (html, css, js, json, md)
 - Convenient status bar: character/line counter, quick project file switching

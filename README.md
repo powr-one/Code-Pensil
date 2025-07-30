@@ -1,4 +1,4 @@
-# Code-Pensil
+# CODE PENCIL MOBILE IDE
 Mobile-First IDE for vibe-coding, web development and prototyping
 
 Use it for free:
@@ -20,3 +20,6 @@ https://code-pensil.vercel.app/
 - Storing code notes and snippets
 
 **Create ideas wherever you are!**
+
+PØWR¹
+powr-one.com

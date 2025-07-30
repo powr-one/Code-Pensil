@@ -2,6 +2,7 @@
 Mobile-First IDE for vibe-coding, web development and prototyping
 
 Use it for free:
+
 https://code-pensil.vercel.app/
 
 **Key features**
@@ -24,4 +25,5 @@ https://code-pensil.vercel.app/
 -----------------
 
 PØWR¹
+
 https://powr-one.com/

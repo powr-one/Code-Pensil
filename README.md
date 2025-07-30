@@ -21,5 +21,7 @@ https://code-pensil.vercel.app/
 
 **Create ideas wherever you are!**
 
+-----------------
+
 PØWR¹
-powr-one.com
+https://powr-one.com/
